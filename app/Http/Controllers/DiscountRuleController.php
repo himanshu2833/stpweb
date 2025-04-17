@@ -104,7 +104,10 @@ class DiscountRuleController extends Controller
 
         // check non exclusive
         $non_exclusive = $discount_rule->sortBy([
-            ['priority','asc']
+            ['priority','asc'],
+            //final amont desc
+            // $this->calculateDiscount($non_exclusive,$purchase_amount),'desc'
+            // start end date dese
         ])->first();
 
         if($non_exclusive){
